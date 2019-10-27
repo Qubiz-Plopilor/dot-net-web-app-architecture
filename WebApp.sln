@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Core.Services.Contra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Core.Services", "src\core\WebApp.Core.Services\WebApp.Core.Services.csproj", "{98FE956F-E147-4614-B3E0-31EDDB6E132A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Core.Services.Test", "test\WebApp.Core.Services.Test\WebApp.Core.Services.Test.csproj", "{27CCD36D-4CDF-4573-AAA7-614642EAB63B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Core.Services.Test", "src\test\WebApp.Core.Services.Test\WebApp.Core.Services.Test.csproj", "{27CCD36D-4CDF-4573-AAA7-614642EAB63B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
