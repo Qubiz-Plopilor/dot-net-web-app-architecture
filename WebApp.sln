@@ -5,25 +5,27 @@ VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.API", "src\client\WebApp.API\WebApp.API.csproj", "{A7D2FC06-2C8C-415E-998C-2B65FA0924DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.API.Infrastructure", "src\client\WebApp.API.Infrastructure\WebApp.API.Infrastructure.csproj", "{84D72B44-9C07-4671-B285-2EE5F50ADEB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.API.Infrastructure", "src\infrastructure\WebApp.API.Infrastructure\WebApp.API.Infrastructure.csproj", "{84D72B44-9C07-4671-B285-2EE5F50ADEB0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Domain", "src\core\WebApp.Domain\WebApp.Domain.csproj", "{86EA980E-4AFD-463C-B6FC-41C60E64C37D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Core.Domain", "src\core\WebApp.Core.Domain\WebApp.Core.Domain.csproj", "{86EA980E-4AFD-463C-B6FC-41C60E64C37D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Domain.Services.Contract", "src\core\WebApp.Domain.Services\WebApp.Domain.Services.Contract.csproj", "{CEA04B99-A4C3-423F-9C95-67412D0258C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Core.Domain.Contracts", "src\core\WebApp.Core.Domain.Contracts\WebApp.Core.Domain.Contracts.csproj", "{CEA04B99-A4C3-423F-9C95-67412D0258C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Application.Services.Contract", "src\core\WebApp.Application.Services\WebApp.Application.Services.Contract.csproj", "{C16A1D94-2123-4E4D-BACA-7F42643FD220}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Infrastructure.Services.Contracts", "src\core\WebApp.Infrastructure.Services.Contracts\WebApp.Infrastructure.Services.Contracts.csproj", "{C16A1D94-2123-4E4D-BACA-7F42643FD220}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Logging", "src\infrastructure\WebApp.Logging\WebApp.Logging.csproj", "{2F0156EA-E59B-4F2B-B3D4-7FD3DDFE8F48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Logging", "src\infrastructure\WebApp.Logging\WebApp.Logging.csproj", "{2F0156EA-E59B-4F2B-B3D4-7FD3DDFE8F48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Domain.Services", "src\infrastructure\WebApp.Domain.Services\WebApp.Domain.Services.csproj", "{67E89AA1-151A-403F-8376-513B648E7777}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Infrastructure.Services", "src\infrastructure\WebApp.Infrastructure.Services\WebApp.Infrastructure.Services.csproj", "{3D644692-D54D-4626-9448-8A61B67BFFCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Application.Services", "src\infrastructure\WebApp.Application.Services\WebApp.Application.Services.csproj", "{3D644692-D54D-4626-9448-8A61B67BFFCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Utilities", "src\core\WebApp.Utilities\WebApp.Utilities.csproj", "{6DBDCE93-87CC-49C5-9002-816D5DF89722}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Utilities", "src\infrastructure\WebApp.Utilities\WebApp.Utilities.csproj", "{6DBDCE93-87CC-49C5-9002-816D5DF89722}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Core.Domain.Services", "src\infrastructure\WebApp.Core.Domain.Services\WebApp.Core.Domain.Services.csproj", "{2B689AD1-5E44-45DE-8D12-79D1052EB16F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Domain.Services.Test", "src\infrastructure\WebApp.Domain.Services.Test\WebApp.Domain.Services.Test.csproj", "{BF91B45E-2EFD-4789-B9BA-C6F2817D5B4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Core.Services.Contracts", "src\core\WebApp.Core.Services.Contracts\WebApp.Core.Services.Contracts.csproj", "{B3E274A5-C092-4803-9652-52CFB0EEB94F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Domain.Persistence", "src\infrastructure\WebApp.Domain.Persistence\WebApp.Domain.Persistence.csproj", "{2B689AD1-5E44-45DE-8D12-79D1052EB16F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Core.Services", "src\core\WebApp.Core.Services\WebApp.Core.Services.csproj", "{98FE956F-E147-4614-B3E0-31EDDB6E132A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Core.Services.Test", "test\WebApp.Core.Services.Test\WebApp.Core.Services.Test.csproj", "{27CCD36D-4CDF-4573-AAA7-614642EAB63B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,10 +57,6 @@ Global
 		{2F0156EA-E59B-4F2B-B3D4-7FD3DDFE8F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F0156EA-E59B-4F2B-B3D4-7FD3DDFE8F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F0156EA-E59B-4F2B-B3D4-7FD3DDFE8F48}.Release|Any CPU.Build.0 = Release|Any CPU
-		{67E89AA1-151A-403F-8376-513B648E7777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67E89AA1-151A-403F-8376-513B648E7777}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67E89AA1-151A-403F-8376-513B648E7777}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67E89AA1-151A-403F-8376-513B648E7777}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3D644692-D54D-4626-9448-8A61B67BFFCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3D644692-D54D-4626-9448-8A61B67BFFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D644692-D54D-4626-9448-8A61B67BFFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -67,14 +65,22 @@ Global
 		{6DBDCE93-87CC-49C5-9002-816D5DF89722}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DBDCE93-87CC-49C5-9002-816D5DF89722}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DBDCE93-87CC-49C5-9002-816D5DF89722}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BF91B45E-2EFD-4789-B9BA-C6F2817D5B4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF91B45E-2EFD-4789-B9BA-C6F2817D5B4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF91B45E-2EFD-4789-B9BA-C6F2817D5B4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF91B45E-2EFD-4789-B9BA-C6F2817D5B4D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2B689AD1-5E44-45DE-8D12-79D1052EB16F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2B689AD1-5E44-45DE-8D12-79D1052EB16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B689AD1-5E44-45DE-8D12-79D1052EB16F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B689AD1-5E44-45DE-8D12-79D1052EB16F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3E274A5-C092-4803-9652-52CFB0EEB94F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E274A5-C092-4803-9652-52CFB0EEB94F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E274A5-C092-4803-9652-52CFB0EEB94F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E274A5-C092-4803-9652-52CFB0EEB94F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98FE956F-E147-4614-B3E0-31EDDB6E132A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98FE956F-E147-4614-B3E0-31EDDB6E132A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98FE956F-E147-4614-B3E0-31EDDB6E132A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98FE956F-E147-4614-B3E0-31EDDB6E132A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CCD36D-4CDF-4573-AAA7-614642EAB63B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CCD36D-4CDF-4573-AAA7-614642EAB63B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CCD36D-4CDF-4573-AAA7-614642EAB63B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CCD36D-4CDF-4573-AAA7-614642EAB63B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\core\WebApp.Application.Services\WebApp.Application.Services.Contract.csproj" />
+    <ProjectReference Include="..\..\core\WebApp.Infrastructure.Services.Contracts\WebApp.Infrastructure.Services.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
