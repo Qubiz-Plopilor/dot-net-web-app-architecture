@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WebApp.Core.Domain.Contracts\WebApp.Core.Domain.Contracts.csproj" />
     <ProjectReference Include="..\WebApp.Core.Domain\WebApp.Core.Domain.csproj" />
   </ItemGroup>
 

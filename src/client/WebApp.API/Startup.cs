@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,7 +8,14 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 using Toucan.API.Infrastructure.Middlewares;
+using WebApp.Core.Services;
+using WebApp.Core.Services.Contracts;
 
 namespace WebApp.API
 {
@@ -127,6 +129,8 @@ namespace WebApp.API
         private void RegisterServices(IServiceCollection services)
         {
             services.AddSingleton(Configuration);
+
+            services.AddScoped<IArticleService, ArticleService>();
         }
     }
 }
