@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Toucan.API.Infrastructure.Middlewares;
+using WebApp.API.Infrastructure.Middlewares;
 using WebApp.Core.Services;
 using WebApp.Core.Services.Contracts;
 
@@ -100,14 +101,14 @@ namespace WebApp.API
 
             app.UseStaticFiles();
 
+            //app.MapWhen(context => context.Request.Path.StartsWithSegments("/assets"), 
+            //    appBuilder => appBuilder.UseStaticFiles());
+
             app.UseCors("CORS_Policy");
 
             app.UseAuthentication();
             app.UseAuthorization();
-
-            // Add Exception handling
-            app.UseMiddleware<ApiExceptionMiddleware>();
-
+            
             // Add the Swagger UI middleware
             app.UseOpenApi();
             app.UseSwaggerUi3(settings =>
@@ -115,15 +116,32 @@ namespace WebApp.API
                 //settings.SwaggerRoutes.Add(new SwaggerUi3Route("default", "/"));
             });
 
+            // Add Exception handling
+
+            // Split the middleware pipeline
+            //app.MapWhen(context => context.Request.Path.StartsWithSegments("/api/articles"), appBuilder =>
+            //{
+            //    appBuilder.UseApiExceptionMiddleware();
+            //});
+
+            //app.UseWhen(context => context.Request.Path.StartsWithSegments("/api/articles"), appBuilder =>
+            //{
+            //    appBuilder.UseApiExceptionMiddleware();
+            //});
+
+            //app.UseMiddleware<ApiExceptionMiddleware>();
+
+            app.UseApiExceptionMiddleware();
+
+            //app.UseMiddleware<CustomTestMiddleware>();
+
             // Add MVC
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
-            });
-
-
+            });           
         }
 
         private void RegisterServices(IServiceCollection services)

@@ -13,6 +13,8 @@ namespace WebApp.Core.Services
     {
         public async Task<IEnumerable<ArticleInfoModel>> GetArticlesByUser(int userId)
         {
+            throw new EntityNotFoundException($"Article not found!");
+
             return new List<ArticleInfoModel>
             {
                 new ArticleInfoModel
