@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApp.Core.Domain.Entities
 {
@@ -6,7 +7,11 @@ namespace WebApp.Core.Domain.Entities
     {
         public int Id { get; set; }
         public Guid UniqueId { get; set; } = Guid.NewGuid();
+
+        [DataType(DataType.Date)]
         public DateTime DateCreated { get; set; } = DateTime.Now;
+
+        [DataType(DataType.Date)]
         public DateTime DateModified { get; set; }
 
         public override bool Equals(object obj)

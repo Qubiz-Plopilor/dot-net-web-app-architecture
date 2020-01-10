@@ -11,6 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<PackageReference Include="Mapster" Version="4.1.1" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.0">
+	  <PrivateAssets>all</PrivateAssets>
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
 	<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
 	<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
     <PackageReference Include="NSwag.AspNetCore" Version="13.1.2" />
@@ -20,6 +25,7 @@
     <ProjectReference Include="..\..\core\WebApp.Core.Services.Contracts\WebApp.Core.Services.Contracts.csproj" />
     <ProjectReference Include="..\..\core\WebApp.Core.Services\WebApp.Core.Services.csproj" />
     <ProjectReference Include="..\..\infrastructure\WebApp.API.Infrastructure\WebApp.API.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\infrastructure\WebApp.Core.Domain.Services\WebApp.Core.Domain.Services.csproj" />
   </ItemGroup>
 
 </Project>

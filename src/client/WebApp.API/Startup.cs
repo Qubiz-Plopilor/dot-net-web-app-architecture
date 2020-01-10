@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -15,6 +16,7 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Toucan.API.Infrastructure.Middlewares;
 using WebApp.API.Infrastructure.Middlewares;
+using WebApp.Core.Domain.Services.DBContext;
 using WebApp.Core.Services;
 using WebApp.Core.Services.Contracts;
 
@@ -80,6 +82,8 @@ namespace WebApp.API
             {
                 options.PayloadSerializerOptions.Converters.Add(new JsonStringEnumConverter());
             });
+
+            services.AddDbContext<ApplicationDbContext>(options=>options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext")));
 
             RegisterServices(services);
         }
