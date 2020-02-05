@@ -16,6 +16,8 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Toucan.API.Infrastructure.Middlewares;
 using WebApp.API.Infrastructure.Middlewares;
+using WebApp.Core.Domain.Contracts;
+using WebApp.Core.Domain.Services;
 using WebApp.Core.Domain.Services.DBContext;
 using WebApp.Core.Services;
 using WebApp.Core.Services.Contracts;
@@ -44,6 +46,8 @@ namespace WebApp.API
                        .AllowAnyMethod()
                        .AllowAnyHeader();
             }));
+
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext")));
 
             // Routing
             services.AddRouting(options =>
@@ -81,9 +85,7 @@ namespace WebApp.API
             .AddJsonProtocol(options =>
             {
                 options.PayloadSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-            });
-
-            services.AddDbContext<ApplicationDbContext>(options=>options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext")));
+            });            
 
             RegisterServices(services);
         }
@@ -145,14 +147,18 @@ namespace WebApp.API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
-            });           
+            });
         }
 
         private void RegisterServices(IServiceCollection services)
         {
             services.AddSingleton(Configuration);
-
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IArticleService, ArticleService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ICommentService, CommentService>();
+            services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<ITagService, TagService>();
         }
     }
 }

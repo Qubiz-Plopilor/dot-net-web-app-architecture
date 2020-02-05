@@ -3,7 +3,9 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApp.Core.Domain.Contracts;
+using WebApp.Core.Domain.Contracts.Repositories;
 using WebApp.Core.Domain.Services.DBContext;
+using WebApp.Core.Domain.Services.Repositories;
 
 namespace WebApp.Core.Domain.Services
 {
@@ -15,7 +17,11 @@ namespace WebApp.Core.Domain.Services
         public UnitOfWork(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
+
+            UserRepository = new UserRepository(dbContext);
         }
+
+        public IUserRepository UserRepository { get; set; }
 
         public UnitOfWork(string connection)
         {

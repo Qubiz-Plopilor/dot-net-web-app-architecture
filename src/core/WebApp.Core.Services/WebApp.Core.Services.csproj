@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\core\WebApp.Core.Services.Contracts\WebApp.Core.Services.Contracts.csproj" />
     <ProjectReference Include="..\..\core\WebApp.Core.Domain\WebApp.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\infrastructure\WebApp.Core.Domain.Services\WebApp.Core.Domain.Services.csproj" />
     <ProjectReference Include="..\WebApp.Core.Domain.Contracts\WebApp.Core.Domain.Contracts.csproj" />
   </ItemGroup>
 
